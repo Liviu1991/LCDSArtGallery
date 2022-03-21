@@ -1,0 +1,15 @@
+C:\Users\Liviu\Desktop\Projects\LCDSArtGallery\LCDSArtGallery.DataAccess\bin\Debug\netcoreapp3.1\LCDSArtGallery.DataAccess.deps.json
+C:\Users\Liviu\Desktop\Projects\LCDSArtGallery\LCDSArtGallery.DataAccess\bin\Debug\netcoreapp3.1\LCDSArtGallery.DataAccess.dll
+C:\Users\Liviu\Desktop\Projects\LCDSArtGallery\LCDSArtGallery.DataAccess\bin\Debug\netcoreapp3.1\LCDSArtGallery.DataAccess.pdb
+C:\Users\Liviu\Desktop\Projects\LCDSArtGallery\LCDSArtGallery.DataAccess\obj\Debug\netcoreapp3.1\LCDSArtGallery.DataAccess.csproj.AssemblyReference.cache
+C:\Users\Liviu\Desktop\Projects\LCDSArtGallery\LCDSArtGallery.DataAccess\obj\Debug\netcoreapp3.1\LCDSArtGallery.DataAccess.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Liviu\Desktop\Projects\LCDSArtGallery\LCDSArtGallery.DataAccess\obj\Debug\netcoreapp3.1\LCDSArtGallery.DataAccess.AssemblyInfoInputs.cache
+C:\Users\Liviu\Desktop\Projects\LCDSArtGallery\LCDSArtGallery.DataAccess\obj\Debug\netcoreapp3.1\LCDSArtGallery.DataAccess.AssemblyInfo.cs
+C:\Users\Liviu\Desktop\Projects\LCDSArtGallery\LCDSArtGallery.DataAccess\obj\Debug\netcoreapp3.1\LCDSArtGallery.DataAccess.csproj.CoreCompileInputs.cache
+C:\Users\Liviu\Desktop\Projects\LCDSArtGallery\LCDSArtGallery.DataAccess\obj\Debug\netcoreapp3.1\LCDSArtGallery.DataAccess.dll
+C:\Users\Liviu\Desktop\Projects\LCDSArtGallery\LCDSArtGallery.DataAccess\obj\Debug\netcoreapp3.1\LCDSArtGallery.DataAccess.pdb
+C:\Users\Liviu\Desktop\Projects\LCDSArtGallery\LCDSArtGallery.DataAccess\bin\Debug\netcoreapp3.1\LCDSArtGallery.Models.dll
+C:\Users\Liviu\Desktop\Projects\LCDSArtGallery\LCDSArtGallery.DataAccess\bin\Debug\netcoreapp3.1\LCDSArtGallery.Utility.dll
+C:\Users\Liviu\Desktop\Projects\LCDSArtGallery\LCDSArtGallery.DataAccess\bin\Debug\netcoreapp3.1\LCDSArtGallery.Models.pdb
+C:\Users\Liviu\Desktop\Projects\LCDSArtGallery\LCDSArtGallery.DataAccess\bin\Debug\netcoreapp3.1\LCDSArtGallery.Utility.pdb
+C:\Users\Liviu\Desktop\Projects\LCDSArtGallery\LCDSArtGallery.DataAccess\obj\Debug\netcoreapp3.1\LCDSArtGallery.DataAccess.csproj.CopyComplete

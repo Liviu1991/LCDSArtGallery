@@ -1,0 +1,10 @@
+C:\Users\Liviu\Desktop\Projects\LCDSArtGallery\LCDSArtGallery.Utility\bin\Debug\netcoreapp3.1\LCDSArtGallery.Utility.deps.json
+C:\Users\Liviu\Desktop\Projects\LCDSArtGallery\LCDSArtGallery.Utility\bin\Debug\netcoreapp3.1\LCDSArtGallery.Utility.dll
+C:\Users\Liviu\Desktop\Projects\LCDSArtGallery\LCDSArtGallery.Utility\bin\Debug\netcoreapp3.1\LCDSArtGallery.Utility.pdb
+C:\Users\Liviu\Desktop\Projects\LCDSArtGallery\LCDSArtGallery.Utility\obj\Debug\netcoreapp3.1\LCDSArtGallery.Utility.csproj.AssemblyReference.cache
+C:\Users\Liviu\Desktop\Projects\LCDSArtGallery\LCDSArtGallery.Utility\obj\Debug\netcoreapp3.1\LCDSArtGallery.Utility.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Liviu\Desktop\Projects\LCDSArtGallery\LCDSArtGallery.Utility\obj\Debug\netcoreapp3.1\LCDSArtGallery.Utility.AssemblyInfoInputs.cache
+C:\Users\Liviu\Desktop\Projects\LCDSArtGallery\LCDSArtGallery.Utility\obj\Debug\netcoreapp3.1\LCDSArtGallery.Utility.AssemblyInfo.cs
+C:\Users\Liviu\Desktop\Projects\LCDSArtGallery\LCDSArtGallery.Utility\obj\Debug\netcoreapp3.1\LCDSArtGallery.Utility.csproj.CoreCompileInputs.cache
+C:\Users\Liviu\Desktop\Projects\LCDSArtGallery\LCDSArtGallery.Utility\obj\Debug\netcoreapp3.1\LCDSArtGallery.Utility.dll
+C:\Users\Liviu\Desktop\Projects\LCDSArtGallery\LCDSArtGallery.Utility\obj\Debug\netcoreapp3.1\LCDSArtGallery.Utility.pdb
