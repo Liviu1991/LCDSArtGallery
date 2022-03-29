@@ -8344,19 +8344,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Liviu\\.nuget\\packages\\": {}
+    "C:\\Users\\freedom-lix\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Liviu\\Desktop\\Projects\\LCDSArtGallery\\LCDSArtGallery.DataAccess\\LCDSArtGallery.DataAccess.csproj",
+      "projectUniqueName": "C:\\Users\\freedom-lix\\source\\repos\\LCDSArtGallery\\LCDSArtGallery\\LCDSArtGallery.DataAccess\\LCDSArtGallery.DataAccess.csproj",
       "projectName": "LCDSArtGallery.DataAccess",
-      "projectPath": "C:\\Users\\Liviu\\Desktop\\Projects\\LCDSArtGallery\\LCDSArtGallery.DataAccess\\LCDSArtGallery.DataAccess.csproj",
-      "packagesPath": "C:\\Users\\Liviu\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Liviu\\Desktop\\Projects\\LCDSArtGallery\\LCDSArtGallery.DataAccess\\obj\\",
+      "projectPath": "C:\\Users\\freedom-lix\\source\\repos\\LCDSArtGallery\\LCDSArtGallery\\LCDSArtGallery.DataAccess\\LCDSArtGallery.DataAccess.csproj",
+      "packagesPath": "C:\\Users\\freedom-lix\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\freedom-lix\\source\\repos\\LCDSArtGallery\\LCDSArtGallery\\LCDSArtGallery.DataAccess\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Liviu\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\freedom-lix\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -8370,11 +8370,11 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "C:\\Users\\Liviu\\Desktop\\Projects\\LCDSArtGallery\\LCDSArtGallery.Models\\LCDSArtGallery.Models.csproj": {
-              "projectPath": "C:\\Users\\Liviu\\Desktop\\Projects\\LCDSArtGallery\\LCDSArtGallery.Models\\LCDSArtGallery.Models.csproj"
+            "C:\\Users\\freedom-lix\\source\\repos\\LCDSArtGallery\\LCDSArtGallery\\LCDSArtGallery.Models\\LCDSArtGallery.Models.csproj": {
+              "projectPath": "C:\\Users\\freedom-lix\\source\\repos\\LCDSArtGallery\\LCDSArtGallery\\LCDSArtGallery.Models\\LCDSArtGallery.Models.csproj"
             },
-            "C:\\Users\\Liviu\\Desktop\\Projects\\LCDSArtGallery\\LCDSArtGallery.Utility\\LCDSArtGallery.Utility.csproj": {
-              "projectPath": "C:\\Users\\Liviu\\Desktop\\Projects\\LCDSArtGallery\\LCDSArtGallery.Utility\\LCDSArtGallery.Utility.csproj"
+            "C:\\Users\\freedom-lix\\source\\repos\\LCDSArtGallery\\LCDSArtGallery\\LCDSArtGallery.Utility\\LCDSArtGallery.Utility.csproj": {
+              "projectPath": "C:\\Users\\freedom-lix\\source\\repos\\LCDSArtGallery\\LCDSArtGallery\\LCDSArtGallery.Utility\\LCDSArtGallery.Utility.csproj"
             }
           }
         }
@@ -8417,7 +8417,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
       }
     }
   }

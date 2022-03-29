@@ -13,17 +13,16 @@ namespace LCDSArtGallery.DataAccess.Repository
         public UnitOfWork(ApplicationDbContext db)
         {
             _db = db;
-            Category = new CategoryRepository(_db);
-            CoverType = new CoverTypeRepository(_db);
-            Company = new CompanyRepository(_db);
+            ProductType = new ProductTypeRepository(_db);
+            Artist = new ArtistRepository(_db);
             Product = new ProductRepository(_db);
         }
 
         public IApplicationUserRepository ApplicationUser { get; private set; }
-        public ICategoryRepository Category { get; private set; }
-        public ICompanyRepository Company { get; private set; }
+
+        public IArtistRepository Artist { get; private set; }
         public IProductRepository Product { get; private set; }
-        public ICoverTypeRepository CoverType { get; private set; }
+        public IProductTypeRepository ProductType { get; private set; }
 
         public void Dispose()
         {

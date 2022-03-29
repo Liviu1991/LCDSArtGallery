@@ -6,10 +6,9 @@ namespace LCDSArtGallery.DataAccess.Repository.IRepository
 {
     public interface IUnitOfWork : IDisposable
     {
-        ICategoryRepository Category { get; }
-        ICoverTypeRepository CoverType { get; }
+        IProductTypeRepository ProductType { get; }
+        IArtistRepository Artist { get; }
         IProductRepository Product { get; }
-        ICompanyRepository Company { get; }
         IApplicationUserRepository ApplicationUser { get; }
 
         void Save();

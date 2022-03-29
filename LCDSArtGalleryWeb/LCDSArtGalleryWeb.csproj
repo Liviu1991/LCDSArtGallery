@@ -17,12 +17,17 @@
     </PackageReference>
     <PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation" Version="3.1.22" />
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.5" />
+    <PackageReference Include="PagedList.Mvc" Version="4.5.0" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\LCDSArtGallery.DataAccess\LCDSArtGallery.DataAccess.csproj" />
     <ProjectReference Include="..\LCDSArtGallery.Models\LCDSArtGallery.Models.csproj" />
     <ProjectReference Include="..\LCDSArtGallery.Utility\LCDSArtGallery.Utility.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\images\products\" />
   </ItemGroup>
 
 </Project>

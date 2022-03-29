@@ -26,16 +26,11 @@ namespace LCDSArtGallery.DataAccess.Repository
                 {
                     objFromDb.ImageUrl = product.ImageUrl;
                 }
-                objFromDb.ISBN = product.ISBN;
-                objFromDb.Price = product.Price;
-                objFromDb.Price50 = product.Price50;
-                objFromDb.ListPrice = product.ListPrice;
-                objFromDb.Price100 = product.Price100;
-                objFromDb.Title = product.Title;
+                objFromDb.Name = product.Name;
+                objFromDb.Size = product.Size;
                 objFromDb.Description = product.Description;
-                objFromDb.CategoryId = product.CategoryId;
-                objFromDb.Author = product.Author;
-                objFromDb.CoverTypeId = product.CoverTypeId;
+                objFromDb.Price = product.Price;
+                objFromDb.ProductTypeId = product.ProductTypeId;
                 
             }
         }

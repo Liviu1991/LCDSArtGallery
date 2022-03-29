@@ -1489,6 +1489,27 @@
           "lib/netstandard1.6/NuGet.Frameworks.dll": {}
         }
       },
+      "PagedList/1.17.0": {
+        "type": "package",
+        "compile": {
+          "lib/net40/PagedList.dll": {}
+        },
+        "runtime": {
+          "lib/net40/PagedList.dll": {}
+        }
+      },
+      "PagedList.Mvc/4.5.0": {
+        "type": "package",
+        "dependencies": {
+          "PagedList": "1.17.0"
+        },
+        "compile": {
+          "lib/net40/PagedList.Mvc.dll": {}
+        },
+        "runtime": {
+          "lib/net40/PagedList.Mvc.dll": {}
+        }
+      },
       "runtime.debian.8-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {
         "type": "package",
         "runtimeTargets": {
@@ -5385,6 +5406,33 @@
         "lib/netstandard1.6/NuGet.Frameworks.xml",
         "nuget.frameworks.4.7.0.nupkg.sha512",
         "nuget.frameworks.nuspec"
+      ]
+    },
+    "PagedList/1.17.0": {
+      "sha512": "Ou6F3WKXh49hOo0TxWM+SkIGuKllYPuPPvnSYOlQ1sTrtuEyuDUhYbSJd5Sdb06i/sWUJZTjiUecEs3Ht/Hx3g==",
+      "type": "package",
+      "path": "pagedlist/1.17.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net40/PagedList.dll",
+        "lib/net40/PagedList.xml",
+        "pagedlist.1.17.0.nupkg.sha512",
+        "pagedlist.nuspec"
+      ]
+    },
+    "PagedList.Mvc/4.5.0": {
+      "sha512": "D0M4qW2g4a9cwG8ozIKUnJheCrm5GpFTceqUl63AXWaAVnTgk+TysZYUOGMsBRuzid8aF+/E8b0bXM6+90jiEw==",
+      "type": "package",
+      "path": "pagedlist.mvc/4.5.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Content/Content/PagedList.css",
+        "lib/net40/PagedList.Mvc.XML",
+        "lib/net40/PagedList.Mvc.dll",
+        "pagedlist.mvc.4.5.0.nupkg.sha512",
+        "pagedlist.mvc.nuspec"
       ]
     },
     "runtime.debian.8-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {
@@ -9959,23 +10007,24 @@
       "Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation >= 3.1.22",
       "Microsoft.EntityFrameworkCore.SqlServer >= 3.1.21",
       "Microsoft.EntityFrameworkCore.Tools >= 3.1.21",
-      "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 3.1.5"
+      "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 3.1.5",
+      "PagedList.Mvc >= 4.5.0"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Liviu\\.nuget\\packages\\": {}
+    "C:\\Users\\freedom-lix\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Liviu\\Desktop\\Projects\\LCDSArtGallery\\LCDSArtGalleryWeb\\LCDSArtGalleryWeb.csproj",
+      "projectUniqueName": "C:\\Users\\freedom-lix\\source\\repos\\LCDSArtGallery\\LCDSArtGallery\\LCDSArtGalleryWeb\\LCDSArtGalleryWeb.csproj",
       "projectName": "LCDSArtGalleryWeb",
-      "projectPath": "C:\\Users\\Liviu\\Desktop\\Projects\\LCDSArtGallery\\LCDSArtGalleryWeb\\LCDSArtGalleryWeb.csproj",
-      "packagesPath": "C:\\Users\\Liviu\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Liviu\\Desktop\\Projects\\LCDSArtGallery\\LCDSArtGalleryWeb\\obj\\",
+      "projectPath": "C:\\Users\\freedom-lix\\source\\repos\\LCDSArtGallery\\LCDSArtGallery\\LCDSArtGalleryWeb\\LCDSArtGalleryWeb.csproj",
+      "packagesPath": "C:\\Users\\freedom-lix\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\freedom-lix\\source\\repos\\LCDSArtGallery\\LCDSArtGallery\\LCDSArtGalleryWeb\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Liviu\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\freedom-lix\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -9989,14 +10038,14 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "C:\\Users\\Liviu\\Desktop\\Projects\\LCDSArtGallery\\LCDSArtGallery.DataAccess\\LCDSArtGallery.DataAccess.csproj": {
-              "projectPath": "C:\\Users\\Liviu\\Desktop\\Projects\\LCDSArtGallery\\LCDSArtGallery.DataAccess\\LCDSArtGallery.DataAccess.csproj"
+            "C:\\Users\\freedom-lix\\source\\repos\\LCDSArtGallery\\LCDSArtGallery\\LCDSArtGallery.DataAccess\\LCDSArtGallery.DataAccess.csproj": {
+              "projectPath": "C:\\Users\\freedom-lix\\source\\repos\\LCDSArtGallery\\LCDSArtGallery\\LCDSArtGallery.DataAccess\\LCDSArtGallery.DataAccess.csproj"
             },
-            "C:\\Users\\Liviu\\Desktop\\Projects\\LCDSArtGallery\\LCDSArtGallery.Models\\LCDSArtGallery.Models.csproj": {
-              "projectPath": "C:\\Users\\Liviu\\Desktop\\Projects\\LCDSArtGallery\\LCDSArtGallery.Models\\LCDSArtGallery.Models.csproj"
+            "C:\\Users\\freedom-lix\\source\\repos\\LCDSArtGallery\\LCDSArtGallery\\LCDSArtGallery.Models\\LCDSArtGallery.Models.csproj": {
+              "projectPath": "C:\\Users\\freedom-lix\\source\\repos\\LCDSArtGallery\\LCDSArtGallery\\LCDSArtGallery.Models\\LCDSArtGallery.Models.csproj"
             },
-            "C:\\Users\\Liviu\\Desktop\\Projects\\LCDSArtGallery\\LCDSArtGallery.Utility\\LCDSArtGallery.Utility.csproj": {
-              "projectPath": "C:\\Users\\Liviu\\Desktop\\Projects\\LCDSArtGallery\\LCDSArtGallery.Utility\\LCDSArtGallery.Utility.csproj"
+            "C:\\Users\\freedom-lix\\source\\repos\\LCDSArtGallery\\LCDSArtGallery\\LCDSArtGallery.Utility\\LCDSArtGallery.Utility.csproj": {
+              "projectPath": "C:\\Users\\freedom-lix\\source\\repos\\LCDSArtGallery\\LCDSArtGallery\\LCDSArtGallery.Utility\\LCDSArtGallery.Utility.csproj"
             }
           }
         }
@@ -10040,6 +10089,10 @@
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
             "target": "Package",
             "version": "[3.1.5, )"
+          },
+          "PagedList.Mvc": {
+            "target": "Package",
+            "version": "[4.5.0, )"
           }
         },
         "imports": [
@@ -10052,6 +10105,12 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
+        "downloadDependencies": [
+          {
+            "name": "Microsoft.NETCore.App.Host.win-x64",
+            "version": "[3.1.22, 3.1.22]"
+          }
+        ],
         "frameworkReferences": {
           "Microsoft.AspNetCore.App": {
             "privateAssets": "none"
@@ -10060,8 +10119,30 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'PagedList 1.17.0' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework '.NETCoreApp,Version=v3.1'. This package may not be fully compatible with your project.",
+      "libraryId": "PagedList",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v3.1"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'PagedList.Mvc 4.5.0' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework '.NETCoreApp,Version=v3.1'. This package may not be fully compatible with your project.",
+      "libraryId": "PagedList.Mvc",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v3.1"
+      ]
+    }
+  ]
 }

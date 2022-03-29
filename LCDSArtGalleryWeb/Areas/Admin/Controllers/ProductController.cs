@@ -9,6 +9,8 @@ using LCDSArtGallery.Models.ViewModels;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using PagedList;
+
 namespace LCDSArtGallery.Areas.Admin.Controllers
 {
     [Area("Admin")]
@@ -33,13 +35,18 @@ namespace LCDSArtGallery.Areas.Admin.Controllers
             ProductVM productVM = new ProductVM()
             {
                 Product=new Product(),
-                CategoryList = _unitOfWork.Category.GetAll().Select(i=> new SelectListItem { 
+         /*       CustomerList = _unitOfWork.Customer.GetAll().Select(i=> new SelectListItem { 
+                    Text = i.FirstName,
+                    Value = i.Id.ToString()
+                }),*/
+                ProductTypeList = _unitOfWork.ProductType.GetAll().Select(i => new SelectListItem
+                {
                     Text = i.Name,
                     Value = i.Id.ToString()
                 }),
-                CoverTypeList = _unitOfWork.CoverType.GetAll().Select(i => new SelectListItem
+                ArtistList = _unitOfWork.Artist.GetAll().Select(i => new SelectListItem
                 {
-                    Text = i.Name,
+                    Text = i.FirstName,
                     Value = i.Id.ToString()
                 })
             };
@@ -57,7 +64,7 @@ namespace LCDSArtGallery.Areas.Admin.Controllers
             return View(productVM);
 
         }
-
+       
         [HttpPost]
         [ValidateAntiForgeryToken]
         public IActionResult Upsert(ProductVM productVM)
@@ -112,14 +119,19 @@ namespace LCDSArtGallery.Areas.Admin.Controllers
             }
             else
             {
-                productVM.CategoryList = _unitOfWork.Category.GetAll().Select(i => new SelectListItem
+/*                productVM.CustomerList = _unitOfWork.Customer.GetAll().Select(i => new SelectListItem
+                {
+                    Text = i.FirstName,
+                    Value = i.Id.ToString()
+                });*/
+                productVM.ProductTypeList = _unitOfWork.ProductType.GetAll().Select(i => new SelectListItem
                 {
                     Text = i.Name,
                     Value = i.Id.ToString()
                 });
-                productVM.CoverTypeList = _unitOfWork.CoverType.GetAll().Select(i => new SelectListItem
+                productVM.ArtistList = _unitOfWork.Artist.GetAll().Select(i => new SelectListItem
                 {
-                    Text = i.Name,
+                    Text = i.FirstName,
                     Value = i.Id.ToString()
                 });
                 if (productVM.Product.Id != 0)
@@ -129,6 +141,51 @@ namespace LCDSArtGallery.Areas.Admin.Controllers
             }
             return View(productVM);
         }
+         public ViewResult SearchProduct(int? id, string sortOrder, string currentFilter, string searchString, int? page)
+        {
+            ViewBag.CurrentSort = sortOrder;
+            ViewBag.NameSortParm = String.IsNullOrEmpty(sortOrder) ? "name_desc" : "";
+            ViewBag.DateSortParm = sortOrder == "Date" ? "date_desc" : "Date";
+
+            if (searchString != null)
+            {
+                page = 1;
+            }
+            else
+            {
+                searchString = currentFilter;
+            }
+            ViewBag.CurrentFilter = searchString;
+
+            var products = from p in _unitOfWork.Product.GetAll()
+                           select p;
+            if (!String.IsNullOrEmpty(searchString))
+            {
+                products = products.Where(p => p.Name.ToUpper().Contains(searchString.ToUpper())
+                                       || p.Description.ToUpper().Contains(searchString.ToUpper()));
+            }
+            switch (sortOrder)
+            {
+                case "name_desc":
+                    products = products.OrderByDescending(p => p.Name);
+                    break;
+                case "Size":
+                    products = products.OrderBy(p => p.Size);
+                    break;
+                case "Price_desc":
+                    products = products.OrderByDescending(p => p.Price);
+                    break;
+                default:  // Name ascending 
+                    products = products.OrderBy(p => p.Name);
+                    break;
+            }
+
+            int pageSize = 3;
+            int pageNumber = (page ?? 1);
+            return View(products.ToPagedList(pageNumber, pageSize));
+            var productList = _unitOfWork.Product.GetFirstOrDefault(i => i.Id == id);
+            return View(productList);
+        }
 
 
         #region API CALLS
@@ -136,7 +193,7 @@ namespace LCDSArtGallery.Areas.Admin.Controllers
         [HttpGet]
         public IActionResult GetAll()
         {
-            var allObj = _unitOfWork.Product.GetAll(includeProperties:"Category,CoverType");
+            var allObj = _unitOfWork.Product.GetAll(includeProperties:"ProductType");
             return Json(new { data = allObj });
         }
 

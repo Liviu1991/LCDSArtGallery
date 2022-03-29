@@ -1,0 +1,31 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "360bf896-926b-4078-a2de-3bb3a95fe0f4": {
+      "ProjectGuid": "360bf896-926b-4078-a2de-3bb3a95fe0f4",
+      "DisplayName": "LCDSArtGalleryWeb",
+      "ColorIndex": 0
+    },
+    "f3f21c01-5fe7-4e0a-b729-31e3576749c3": {
+      "ProjectGuid": "f3f21c01-5fe7-4e0a-b729-31e3576749c3",
+      "DisplayName": "LCDSArtGallery.DataAccess",
+      "ColorIndex": 1
+    },
+    "3cf2827b-6f3a-43ea-9bf0-7f9b4c782c82": {
+      "ProjectGuid": "3cf2827b-6f3a-43ea-9bf0-7f9b4c782c82",
+      "DisplayName": "LCDSArtGallery.Utility",
+      "ColorIndex": 2
+    },
+    "005c5b90-9175-4605-90ff-232188685ffa": {
+      "ProjectGuid": "005c5b90-9175-4605-90ff-232188685ffa",
+      "DisplayName": "LCDSArtGallery.Models",
+      "ColorIndex": 3
+    },
+    "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3": {
+      "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
+      "DisplayName": "Miscellaneous Files",
+      "ColorIndex": -1
+    }
+  },
+  "NextColorIndex": 4
+}

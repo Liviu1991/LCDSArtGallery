@@ -19,72 +19,37 @@ namespace LCDSArtGallery.DataAccess.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-            modelBuilder.Entity("LCDSArtGallery.Models.Category", b =>
+            modelBuilder.Entity("LCDSArtGallery.Models.Artist", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(50)")
-                        .HasMaxLength(50);
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Categories");
-                });
-
-            modelBuilder.Entity("LCDSArtGallery.Models.Company", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<string>("City")
+                    b.Property<string>("Address")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<bool>("IsAuthorizedCompany")
-                        .HasColumnType("bit");
-
-                    b.Property<string>("Name")
-                        .IsRequired()
+                    b.Property<string>("Biography")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("PhoneNumber")
+                    b.Property<int>("ContactNumber")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Email")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("PostalCode")
+                    b.Property<string>("FirstName")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("State")
+                    b.Property<string>("LastName")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("StreetAddress")
+                    b.Property<string>("Overview")
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
 
-                    b.ToTable("Companies");
-                });
-
-            modelBuilder.Entity("LCDSArtGallery.Models.CoverType", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(50)")
-                        .HasMaxLength(50);
-
-                    b.HasKey("Id");
-
-                    b.ToTable("CoverTypes");
+                    b.ToTable("Artists");
                 });
 
             modelBuilder.Entity("LCDSArtGallery.Models.Product", b =>
@@ -94,49 +59,51 @@ namespace LCDSArtGallery.DataAccess.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<string>("Author")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("CategoryId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("CoverTypeId")
+                    b.Property<int>("ArtistId")
                         .HasColumnType("int");
 
                     b.Property<string>("Description")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("ISBN")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<string>("ImageUrl")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<double>("ListPrice")
-                        .HasColumnType("float");
+                    b.Property<string>("Name")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<double>("Price")
                         .HasColumnType("float");
 
-                    b.Property<double>("Price100")
-                        .HasColumnType("float");
+                    b.Property<int>("ProductTypeId")
+                        .HasColumnType("int");
 
-                    b.Property<double>("Price50")
-                        .HasColumnType("float");
-
-                    b.Property<string>("Title")
-                        .IsRequired()
+                    b.Property<string>("Size")
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("CategoryId");
+                    b.HasIndex("ArtistId");
 
-                    b.HasIndex("CoverTypeId");
+                    b.HasIndex("ProductTypeId");
 
                     b.ToTable("Products");
+                });
+
+            modelBuilder.Entity("LCDSArtGallery.Models.ProductType", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(50)")
+                        .HasMaxLength(50);
+
+                    b.HasKey("Id");
+
+                    b.ToTable("ProductTypes");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
@@ -348,11 +315,11 @@ namespace LCDSArtGallery.DataAccess.Migrations
                     b.Property<string>("City")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int?>("CompanyId")
-                        .HasColumnType("int");
-
-                    b.Property<string>("Name")
+                    b.Property<string>("FirstName")
                         .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("LastName")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("PostalCode")
@@ -364,22 +331,20 @@ namespace LCDSArtGallery.DataAccess.Migrations
                     b.Property<string>("StreetAddress")
                         .HasColumnType("nvarchar(max)");
 
-                    b.HasIndex("CompanyId");
-
                     b.HasDiscriminator().HasValue("ApplicationUser");
                 });
 
             modelBuilder.Entity("LCDSArtGallery.Models.Product", b =>
                 {
-                    b.HasOne("LCDSArtGallery.Models.Category", "Category")
+                    b.HasOne("LCDSArtGallery.Models.Artist", "Artist")
                         .WithMany()
-                        .HasForeignKey("CategoryId")
+                        .HasForeignKey("ArtistId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("LCDSArtGallery.Models.CoverType", "CoverType")
+                    b.HasOne("LCDSArtGallery.Models.ProductType", "ProductType")
                         .WithMany()
-                        .HasForeignKey("CoverTypeId")
+                        .HasForeignKey("ProductTypeId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });
@@ -433,13 +398,6 @@ namespace LCDSArtGallery.DataAccess.Migrations
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
-                });
-
-            modelBuilder.Entity("LCDSArtGallery.Models.ApplicationUser", b =>
-                {
-                    b.HasOne("LCDSArtGallery.Models.Company", "Company")
-                        .WithMany()
-                        .HasForeignKey("CompanyId");
                 });
 #pragma warning restore 612, 618
         }
