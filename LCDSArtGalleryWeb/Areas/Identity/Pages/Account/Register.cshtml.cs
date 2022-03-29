@@ -78,11 +78,12 @@ namespace LCDSArtGalleryWeb.Areas.Identity.Pages.Account
             public string ConfirmPassword { get; set; }
             public string FirstName { get; set; }
             public string LastName { get; set; }
-            public string PhoneNumber { get; set; }
-            public string Role { get; set; }
-            [ValidateNever]
+           
+            public string? Role { get; set; }
+            
             public IEnumerable<SelectListItem> RoleList { get; set; }
-
+            [ValidateNever]
+            public string PhoneNumber { get; set; }
         }
 
         public async Task OnGetAsync(string returnUrl = null)
@@ -90,7 +91,7 @@ namespace LCDSArtGalleryWeb.Areas.Identity.Pages.Account
             //used for registering user
             //gets the roles from SD from Utility project and displays user roles
             //then it assigns the role to the new user
-            if (!_roleManager.RoleExistsAsync(SD.Customer_Role).GetAwaiter().GetResult())
+            if (!_roleManager.RoleExistsAsync(SD.Admin_Role).GetAwaiter().GetResult())
             {
                 _roleManager.CreateAsync(new IdentityRole(SD.Artist_Role)).GetAwaiter().GetResult();
                 _roleManager.CreateAsync(new IdentityRole(SD.Admin_Role)).GetAwaiter().GetResult();
@@ -122,10 +123,20 @@ namespace LCDSArtGalleryWeb.Areas.Identity.Pages.Account
                 user.FirstName = Input.FirstName;
                 user.LastName = Input.LastName;
                 user.PhoneNumber = Input.PhoneNumber;
+                
 
                 var result = await _userManager.CreateAsync(user, Input.Password);
                 if (result.Succeeded)
                 {
+                    //this was added lastly cause something did not work as expected
+                    if(Input.Role == null)
+                    {
+                        await _userManager.AddToRoleAsync(user, SD.Customer_Role);
+                    }
+                    else
+                    {
+                        await _userManager.AddToRoleAsync(user, Input.Role);
+                    }
                     _logger.LogInformation("User created a new account with password.");
 
                     var code = await _userManager.GenerateEmailConfirmationTokenAsync(user);

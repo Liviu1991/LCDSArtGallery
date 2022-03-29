@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using LCDSArtGallery.DataAccess.Repository.IRepository;
 using LCDSArtGallery.Models;
 using LCDSArtGallery.Utility;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace LCDSArtGallery.Areas.Admin.Controllers
@@ -18,12 +19,12 @@ namespace LCDSArtGallery.Areas.Admin.Controllers
         {
             _unitOfWork = unitOfWork;
         }
-
+        [Authorize(Roles = SD.Admin_Role)]
         public IActionResult Index()
         {
             return View();
         }
-
+        [Authorize(Roles = SD.Admin_Role)]
         public IActionResult Upsert(int? id)
         {
             ProductType ProductType = new ProductType();
@@ -44,6 +45,7 @@ namespace LCDSArtGallery.Areas.Admin.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = SD.Admin_Role)]
         public IActionResult Upsert(ProductType ProductType)
         {
             if (ModelState.IsValid)

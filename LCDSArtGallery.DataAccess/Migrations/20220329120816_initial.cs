@@ -61,11 +61,7 @@ namespace LCDSArtGallery.DataAccess.Migrations
                     AccessFailedCount = table.Column<int>(nullable: false),
                     Discriminator = table.Column<string>(nullable: false),
                     FirstName = table.Column<string>(nullable: true),
-                    LastName = table.Column<string>(nullable: true),
-                    StreetAddress = table.Column<string>(nullable: true),
-                    City = table.Column<string>(nullable: true),
-                    State = table.Column<string>(nullable: true),
-                    PostalCode = table.Column<string>(nullable: true)
+                    LastName = table.Column<string>(nullable: true)
                 },
                 constraints: table =>
                 {

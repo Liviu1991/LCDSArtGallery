@@ -31,14 +31,27 @@ namespace LCDSArtGalleryWeb
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddDbContext<ApplicationDbContext>(options =>
-               options.UseSqlServer(
-                   Configuration.GetConnectionString("DefaultConnection")));
-            services.AddIdentity<IdentityUser, IdentityRole>().AddDefaultTokenProviders()
+            services.AddControllersWithViews();
+            services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(
+                Configuration.GetConnectionString("DefaultConnection")));
+            services.AddIdentity<IdentityUser, IdentityRole>(options =>
+            {
+                options.SignIn.RequireConfirmedAccount = false;
+
+                options.User.RequireUniqueEmail = true;
+
+                options.Lockout.AllowedForNewUsers = true;
+
+                options.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromMinutes(10);
+
+                options.Lockout.MaxFailedAccessAttempts = 3;
+            })
+                .AddDefaultTokenProviders()
+
                 .AddEntityFrameworkStores<ApplicationDbContext>();
             services.AddSingleton<IEmailSender, EmailSender>();
+            // below line is used for mapping stripe keys with the properties from the class StripeSettings
             services.AddScoped<IUnitOfWork, UnitOfWork>();
-            services.AddControllersWithViews().AddRazorRuntimeCompilation();
             services.AddRazorPages();
         }
 

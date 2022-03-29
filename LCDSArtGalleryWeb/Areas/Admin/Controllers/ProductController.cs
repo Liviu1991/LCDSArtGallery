@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 using LCDSArtGallery.DataAccess.Repository.IRepository;
 using LCDSArtGallery.Models;
 using LCDSArtGallery.Models.ViewModels;
+using LCDSArtGallery.Utility;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
@@ -29,7 +31,7 @@ namespace LCDSArtGallery.Areas.Admin.Controllers
         {
             return View();
         }
-
+        [Authorize(Roles = SD.Admin_Role)]
         public IActionResult Upsert(int? id)
         {
             ProductVM productVM = new ProductVM()
@@ -64,7 +66,7 @@ namespace LCDSArtGallery.Areas.Admin.Controllers
             return View(productVM);
 
         }
-       
+      
         [HttpPost]
         [ValidateAntiForgeryToken]
         public IActionResult Upsert(ProductVM productVM)
