@@ -69,6 +69,7 @@ namespace LCDSArtGallery.Areas.Admin.Controllers
       
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = SD.Admin_Role)]
         public IActionResult Upsert(ProductVM productVM)
         {
             if (ModelState.IsValid)
