@@ -28,3 +28,13 @@ C:\Users\freedom-lix\source\repos\LCDSArtGallery\LCDSArtGallery\LCDSArtGallery.M
 C:\Users\freedom-lix\source\repos\LCDSArtGallery\LCDSArtGallery\LCDSArtGallery.Models\obj\Debug\netcoreapp3.1\LCDSArtGallery.Models.csproj.CoreCompileInputs.cache
 C:\Users\freedom-lix\source\repos\LCDSArtGallery\LCDSArtGallery\LCDSArtGallery.Models\obj\Debug\netcoreapp3.1\LCDSArtGallery.Models.dll
 C:\Users\freedom-lix\source\repos\LCDSArtGallery\LCDSArtGallery\LCDSArtGallery.Models\obj\Debug\netcoreapp3.1\LCDSArtGallery.Models.pdb
+C:\Users\liviu\OneDrive\Desktop\LCDSArtGallery\LCDSArtGallery.Models\bin\Debug\netcoreapp3.1\LCDSArtGallery.Models.deps.json
+C:\Users\liviu\OneDrive\Desktop\LCDSArtGallery\LCDSArtGallery.Models\bin\Debug\netcoreapp3.1\LCDSArtGallery.Models.dll
+C:\Users\liviu\OneDrive\Desktop\LCDSArtGallery\LCDSArtGallery.Models\bin\Debug\netcoreapp3.1\LCDSArtGallery.Models.pdb
+C:\Users\liviu\OneDrive\Desktop\LCDSArtGallery\LCDSArtGallery.Models\obj\Debug\netcoreapp3.1\LCDSArtGallery.Models.csproj.AssemblyReference.cache
+C:\Users\liviu\OneDrive\Desktop\LCDSArtGallery\LCDSArtGallery.Models\obj\Debug\netcoreapp3.1\LCDSArtGallery.Models.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\liviu\OneDrive\Desktop\LCDSArtGallery\LCDSArtGallery.Models\obj\Debug\netcoreapp3.1\LCDSArtGallery.Models.AssemblyInfoInputs.cache
+C:\Users\liviu\OneDrive\Desktop\LCDSArtGallery\LCDSArtGallery.Models\obj\Debug\netcoreapp3.1\LCDSArtGallery.Models.AssemblyInfo.cs
+C:\Users\liviu\OneDrive\Desktop\LCDSArtGallery\LCDSArtGallery.Models\obj\Debug\netcoreapp3.1\LCDSArtGallery.Models.csproj.CoreCompileInputs.cache
+C:\Users\liviu\OneDrive\Desktop\LCDSArtGallery\LCDSArtGallery.Models\obj\Debug\netcoreapp3.1\LCDSArtGallery.Models.dll
+C:\Users\liviu\OneDrive\Desktop\LCDSArtGallery\LCDSArtGallery.Models\obj\Debug\netcoreapp3.1\LCDSArtGallery.Models.pdb

@@ -11,5 +11,6 @@ namespace LCDSArtGallery.Utility
         public const string Artist_Role = "Artist";
         public const string Employee_Role = "Employee";
         public const string Admin_Role = "Admin";
+        public const string ssShoppingCart = "Shoping Cart Session";
     }
 }

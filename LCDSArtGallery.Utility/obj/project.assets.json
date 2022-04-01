@@ -594,19 +594,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\freedom-lix\\.nuget\\packages\\": {}
+    "C:\\Users\\liviu\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\freedom-lix\\source\\repos\\LCDSArtGallery\\LCDSArtGallery\\LCDSArtGallery.Utility\\LCDSArtGallery.Utility.csproj",
+      "projectUniqueName": "C:\\Users\\liviu\\OneDrive\\Desktop\\LCDSArtGallery\\LCDSArtGallery.Utility\\LCDSArtGallery.Utility.csproj",
       "projectName": "LCDSArtGallery.Utility",
-      "projectPath": "C:\\Users\\freedom-lix\\source\\repos\\LCDSArtGallery\\LCDSArtGallery\\LCDSArtGallery.Utility\\LCDSArtGallery.Utility.csproj",
-      "packagesPath": "C:\\Users\\freedom-lix\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\freedom-lix\\source\\repos\\LCDSArtGallery\\LCDSArtGallery\\LCDSArtGallery.Utility\\obj\\",
+      "projectPath": "C:\\Users\\liviu\\OneDrive\\Desktop\\LCDSArtGallery\\LCDSArtGallery.Utility\\LCDSArtGallery.Utility.csproj",
+      "packagesPath": "C:\\Users\\liviu\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\liviu\\OneDrive\\Desktop\\LCDSArtGallery\\LCDSArtGallery.Utility\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\freedom-lix\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\liviu\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -652,7 +652,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
       }
     }
   }
